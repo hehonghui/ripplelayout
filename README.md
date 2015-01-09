@@ -1,6 +1,7 @@
 # ripplelayout
    这是一个类似于支付宝声波支付的波纹效果布局, 使用了NineOldAnimations动画库,使之可以兼容API 11以下的系统。效果如下:      
-<img src="http://img.blog.csdn.net/20150109104238583?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmJveWZlaXl1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" style="border:1px solid black"> 
+
+<img src="http://img.blog.csdn.net/20150109114245750" alt="" width="200" height="320" style="border:1px solid black">
 
 ## 使用示例    
    在布局文件中添加RippleLayout,并且将你的中心视图添加到RippleLayout中，例如 :     
