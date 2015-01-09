@@ -44,6 +44,7 @@ import java.util.ArrayList;
 
 /**
  * 这是一个类似支付宝声波支付的波纹效果布局,该布局中默认添加了不可见的圆形的视图,启动动画时会启动缩放、颜色渐变动画使得产生波纹效果.
+ * 这些动画都是无限循环的,并且每个View的动画之间都有时间间隔，这些时间间隔就会导致视图有大有小，从而产生波纹的效果.
  * 
  * @author mrsimple
  */
@@ -158,6 +159,9 @@ public class RippleLayout extends RelativeLayout {
         mRippleViewParams.addRule(CENTER_IN_PARENT, TRUE);
     }
 
+    /**
+     * 计算每个RippleView之间的动画时间间隔,从而产生波纹效果
+     */
     private void calculateAnimDelay() {
         mAnimDelay = mAnimDuration / mRippleViewNums;
     }
@@ -177,8 +181,8 @@ public class RippleLayout extends RelativeLayout {
             addAnimToRippleView(rippleView, i);
         }
 
+        // x, y, alpha动画一块执行
         mAnimatorSet.playTogether(mAnimatorList);
-
     }
 
     private void initAnimSet() {
@@ -186,6 +190,12 @@ public class RippleLayout extends RelativeLayout {
         mAnimatorSet.setInterpolator(new AccelerateDecelerateInterpolator());
     }
 
+    /**
+     * 为每个RippleView添加动画效果,并且设置动画延时,每个视图启动动画的时间不同,就会产生波纹
+     * 
+     * @param rippleView
+     * @param i 视图所在的索引
+     */
     private void addAnimToRippleView(RippleView rippleView, int i) {
 
         // x轴的缩放动画
