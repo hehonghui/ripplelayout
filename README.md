@@ -30,7 +30,7 @@
 
     
 这样,图片就在RippleLayout的中心,RippleLayout会为你添加通过rippleNums指定的波形数量.   
-**注意**,上述布局中引用了xmlns:ripple="http://schemas.android.com/apk/org.simple.ripplelayout"，这是RippleLayout的资源路径，如果你把RippleLayout当中引用工程，那么应该这么引入；但是当你把RippleLayout以及资源拷贝到你的工程中使用时，这里的“org.simple.ripplelayout”需要修改为你的工程的报名,即你的R类的路径。       
+**注意**,上述布局中引用了xmlns:ripple="http://schemas.android.com/apk/org.simple.ripplelayout"，这是RippleLayout的资源路径，修改成你包路径即可路径。       
    更多详情请参考 : <a href="http://blog.csdn.net/bboyfeiyu/article/details/42552249" target="_blank">Mr.Simple的博客</a> .          
    
    
